@@ -1,0 +1,66 @@
+ [
+    {
+      "id": 1,
+      "image": "./public/aroscebolla.webp",
+      "name": "Product 1",
+      "description": "Full Burguer + Onion Rings",
+      "2price": "$2.99"
+    },
+    {
+      "id": 2,
+      "image": "./public/CheeseBurguers.png",
+      "name": "Product 2",
+      "description": "2x1 Full Burguer + Cheddar",
+      "price": "$4.00"
+    },
+    {
+      "id": 3,
+      "image": "./public/asadotira.jpg",
+      "name": "Product 3",
+      "description": "Tira de Asado Burguer",
+      "price": "$5.75"
+    },
+    {
+      "id": 4,
+      "image": "./public/veggie.webp",
+      "name": "Product 2",
+      "description": "Veggie Beet Burguer",
+      "price": "$3.00"
+    },
+    {
+      "id": 5,
+      "image": "./public/aroscebolla.webp",
+      "name": "Product 2",
+      "description": "Fried Chicken",
+      "price": "$5.75"
+    },
+    {
+      "id": 6,
+      "image": "./public/aroscebolla.webp",
+      "name": "Product 2",
+      "description": "Bacon Fries",
+      "price": "$2.99"
+    },
+    {
+      "id": 7,
+      "image": "./public/aroscebolla.webp",
+      "name": "Product 1",
+      "description": "Chicken Burguer",
+      "price": "$4.99"
+    },
+    {
+      "id": 8,
+      "image": "./public/aroscebolla.webp",
+      "name": "Product 2",
+      "description": "Fried Egg Burguer",
+      "price": "$4.65"
+    },
+    {
+      "id": 9,
+      "image": "./public/aroscebolla.webp",
+      "name": "Product 3",
+      "description": "Four Meat Burguer",
+      "price": "$6.00"
+    }
+    
+  ]
