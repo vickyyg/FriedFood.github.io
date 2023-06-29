@@ -36,6 +36,7 @@ function Navegador() {
 
           </Navbar.Collapse>
         </Container>
+        
       </Navbar>
     </>
   );

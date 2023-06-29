@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Item.css";
 import { Link } from 'react-router-dom'
-import ItemCount from '../ItemCount/ItemCount';
+import { CartContext } from '../Context/CartContext';
 
 
 const Product = () => {
    const [category, setCategory] = useState('all')
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
 
   const products = [
     {
@@ -14,7 +19,7 @@ const Product = () => {
       image: './public/aroscebolla.webp',
       name: 'Product 1',
       description: 'Full Burguer + Onion Rings',
-      price: '$2.99',
+      price: '3',
       
     },
     {
@@ -22,7 +27,7 @@ const Product = () => {
       image: './public/CheeseBurguers.png',
       name: 'Product 2',
       description: '2x1 Full Burguer + Cheddar',
-      price: '$4.00',
+      price: '4',
       category: 'sin-tacc',
     },
     {
@@ -30,21 +35,21 @@ const Product = () => {
       image: './public/asadotira.jpg',
       name: 'Product 3',
       description: 'Tira de Asado Burguer  ',
-      price: '$5.75',
+      price: '6',
     },
     {
       id: 4,
       image: './public/veggie.webp',
       name: 'Product 2',
       description: 'Veggie Beet Burguer',
-      price: '$3.00',
+      price: '3',
     },
     {
       id: 5,
       image: './public/pollofrito.jpg',
       name: 'Fried Chicken',
       description: 'Fried chicken no atc',
-      price: '$5.75',
+      price: '5',
       category: 'sin-tacc',
     },
     {
@@ -52,14 +57,14 @@ const Product = () => {
       image: './public/papasbacon.webp',
       name: 'Product 2',
       description: 'Bacon Fries',
-      price: '$2.99',
+      price: '2',
     },
     {
       id: 7,
       image: './public/hamburpollofrito.jpg',
       name: 'Product 1',
       description: 'Chicken Burguer',
-      price: '$4.99',
+      price: '4',
       category: 'sin-tacc',
     },
     {
@@ -67,7 +72,7 @@ const Product = () => {
       image: './public/huevo.jpg',
       name: 'Product 2',
       description: 'Fried Egg Burguer',
-      price: '$4.65',
+      price: '4',
       category: 'sin-tacc',
     },
     {
@@ -75,7 +80,7 @@ const Product = () => {
       image: './public/4pisos.jpg',
       name: 'Product 3',
       description: 'Four Meat Burguer',
-      price: '$6.00',
+      price: '6',
     },
     // ... Agrega los datos de los demás productos aquí
   ];
@@ -120,7 +125,7 @@ const Product = () => {
                 <h5 className="card-title">{product.name}</h5>
                 <p className="card-text">{product.description}</p>
                 <p className="card-text">{product.price}</p>
-                <Link to="/item-count">Agregar al carrito</Link>
+                <Link to="/cart" onClick={() => handleAddToCart(product)}>Comprar</Link>
                 
                 
               </div>
